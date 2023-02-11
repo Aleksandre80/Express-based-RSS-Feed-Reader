@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
         const carouselItems = items.map((item, index) => `
           <div class="carousel-item ${index === 0 ? 'active' : ''}">
             <div class="container">
-              <h1 class="fashion_taital" style = "color: red"><a href="${item.link}">${item.title}</a></h1>
+              <h1 class="news_taital" style = "color: red"><a href="${item.link}">${item.title}</a></h1>
               <p>${item.pubDate}</p>
             </div>
           </div>
@@ -26,7 +26,7 @@ app.get('/', async (req, res) => {
 
 
         res.send(`
-            <div class="fashion_section">
+            <div class="news_section">
               <div id="main_slider" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   ${carouselItems.join('')}
